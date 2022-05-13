@@ -20,6 +20,6 @@ COPY --from=dependencies /app/package.json ./
 RUN npm install
 COPY --from=build /app/dist ./dist
 RUN mkdir ./logs
-EXPOSE 3000
+EXPOSE 3003
 
 CMD ["node", "dist/server.js"]
